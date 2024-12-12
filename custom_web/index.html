@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <title>Northeastern | Oakland</title>
+    <style>body{padding:10px;margin:0;font-family:-system-ui,sans-serif;color:#333;background:#fff}a{color:#0aa;text-decoration:none}.container{max-width:1200;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:40px}.document_theme_dark{background:#22201c;color:#ddd}.widgets{display:flex;flex-wrap:nowrap}.widget{margin-top:1rem}.widget__comments-frame{border:1px dashed #aaa;width:35rem;max-width:100%}.widgets__counter-widget{margin-left:1em}@media screen and (max-width:800px){.container{padding:1em}.widgets{flex-direction:column}.widgets__counter-widget{margin-left:0}}.header{display:flex;flex-direction:row;justify-content:space-between;}.message{display:flex;flex-direction:column;justify-content: center;text-align: center;gap:10px}</style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>
+        <span style="color: #B22222;">Northeastern</span> 
+        <span style="background-color: black; color: white; padding-left:5px;padding-right:5px">Now</span>
+      </h1>
+      <button style="background-color:gray;border:none;height:30px;border-radius:30px;margin-top:20px", id="toggle-theme">Toggle theme</button>      
+    </div>
+    <div class="container">
+      <div class="message">
+        <h2 style="gap:0;margin:0;">Oakland Campus</h2>
+        <div class="widget__frame widget__counter-frame">Comments count: <span class="remark42__counter"></span></div>
+        <p style="color: gray;gap:0;margin:0">Leave a comment and join the conversation!</p>
+        <hr style="border: 1px solid dimgray; width: 800px; margin: 30px 0; gap:10px">
+      </div>
+      <div style="min-width:800px", id="remark42"></div>
+    </div>
+    <script>var body=document.querySelector("body"),theme="light";if("matchMedia"in window){var mq=window.matchMedia("(prefers-color-scheme: dark)");function getTheme(){return mq.matches?"dark":"light"}mq.matches&&body.classList.add("document_theme_dark"),theme=getTheme(),mq.addListener((function(){REMARK42.changeTheme(getTheme())}))}document.getElementById("toggle-theme").addEventListener("click",(function(e){if(e.preventDefault(),body.classList.contains("document_theme_dark"))return body.classList.add("document_theme_light"),body.classList.remove("document_theme_dark"),void window.REMARK42.changeTheme("light");body.classList.add("document_theme_dark"),body.classList.remove("document_theme_light"),window.REMARK42.changeTheme("dark")}));var remark_config={site_id:"remark",host:"http://54.81.103.167:8080",url:window.location.href,components:["embed","counter"],theme:theme};!function(e,t){for(var d=t.head||t.body,o=0;o<e.length;o++){var n=t.createElement("script"),m="noModule"in n,a=m?".mjs":".js";m&&(n.type="module"),n.async=!0,n.defer=!0,n.src=remark_config.host+"/web/"+e[o]+a,d.appendChild(n)}}(remark_config.components||["embed"],document)</script>
+    <noscript> Please enable JavaScript to view the comments powered by Remark. </noscript>
+  </body>
+</html>

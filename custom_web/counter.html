@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <title>Counter</title>
+    <style>body{padding:0;margin:0}.container{max-width:800px;margin:40px}</style>
+  </head>
+  <body>
+    <div class="container">
+      <p>
+        First counter with url from data-attribute:
+        <span class="remark42__counter" data-url="https://remark42.com/demo/"></span>
+        (<a href="http://127.0.0.1:8080/web/" target="_blank">note</a>)
+      </p>
+
+      <p>
+        Second counter with url from global remark config:
+        <span class="remark42__counter"></span>
+        (<a href="http://127.0.0.1:8080/web/" target="_blank">note</a>)
+      </p>
+
+      <p>If it can't get url from data-attribute or remark config, it will try to use window.location.href for it.</p>
+    </div>
+
+    <script>var remark_config={site_id:"remark",host:"http://52.91.75.237:8080",url:"https://remark42.com/demo/",components:["counter"]};!function(e,r){for(var o=r.head||r.body,n=0;n<e.length;n++){var t=r.createElement("script"),m="noModule"in t,c=m?".mjs":".js";m&&(t.type="module"),t.async=!0,t.defer=!0,t.src=remark_config.host+"/web/"+e[n]+c,o.appendChild(t)}}(remark_config.components||["embed"],document)</script>
+    <noscript> Please enable JavaScript to view the comments powered by Remark. </noscript>
+  </body>
+</html>
