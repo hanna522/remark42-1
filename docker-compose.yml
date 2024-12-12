@@ -22,7 +22,7 @@ services:
     #   - "127.0.0.1:8080:8080"
 
     environment:
-      - REMARK_URL=http://54.81.103.167:8080
+      - REMARK_URL=http://52.90.245.219:8080
       - SECRET=pw1111
       - DEBUG=true
       - AUTH_ANON=true # Allow anonymous user
